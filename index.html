@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Masobawadi | ग्रामपंचायत पोर्टल</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            🌿 Digital Masobawadi
+            <p>आपलं गाव, आपली जबाबदारी</p>
+        </div>
+
+        <button id="menuBtn" type="button">☰</button>
+
+        <nav id="navbar">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#complaint">Complaint</a>
+            <a href="#status">Status</a>
+            <a href="#notices">Notices</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- HOME SECTION -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+            <p class="tagline">WELCOME TO DIGITAL MASOBAWADI</p>
+
+            <h1>
+                छोटंसं गाव,<br>
+                <span>मोठी स्वप्नं!</span>
+            </h1>
+
+            <p>
+                आपल्या गावाच्या विकासासाठी एक डिजिटल पाऊल.
+                गावातील समस्या नोंदवा, सूचना पहा आणि
+                उपयुक्त सरकारी सेवा मिळवा.
+            </p>
+
+            <a href="#complaint" class="btn">
+                📝 समस्या नोंदवा
+            </a>
+
+            <a href="#services" class="btn secondary">
+                सर्व सेवा पहा
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- VILLAGE INFORMATION -->
+    <section class="village-info">
+
+        <div class="info-card">
+            <h2>60–70</h2>
+            <p>अंदाजे घरे</p>
+        </div>
+
+        <div class="info-card">
+            <h2>01</h2>
+            <p>जि.प. शाळा</p>
+        </div>
+
+        <div class="info-card">
+            <h2>02</h2>
+            <p>मंदिरे</p>
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+
+        <h2>गावासाठी डिजिटल सेवा</h2>
+
+        <div class="service-container">
+
+            <a href="#complaint" class="service-card">
+                <span>🛠️</span>
+                <h3>तक्रार नोंदवा</h3>
+                <p>रस्ता, पाणी, स्वच्छता आणि इतर समस्या.</p>
+            </a>
+
+            <a href="#status" class="service-card">
+                <span>🔎</span>
+                <h3>तक्रार स्थिती</h3>
+                <p>तुमच्या तक्रारीचा क्रमांक शोधा.</p>
+            </a>
+
+            <a href="#notices" class="service-card">
+                <span>📢</span>
+                <h3>गावाच्या सूचना</h3>
+                <p>महत्त्वाच्या घोषणा आणि अपडेट्स.</p>
+            </a>
+
+            <a href="#education" class="service-card">
+                <span>🎓</span>
+                <h3>विद्यार्थी मदत</h3>
+                <p>शिक्षण आणि ऑनलाइन अभ्यास साहित्य.</p>
+            </a>
+
+            <a href="#schemes" class="service-card">
+                <span>🏛️</span>
+                <h3>सरकारी योजना</h3>
+                <p>सरकारी योजनांसाठी उपयुक्त दुवे.</p>
+            </a>
+
+            <a href="#contact" class="service-card">
+                <span>☎️</span>
+                <h3>महत्त्वाचे संपर्क</h3>
+                <p>उपयुक्त संपर्क आणि मदतीची माहिती.</p>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLAINT FORM -->
+    <section id="complaint" class="section complaint-section">
+
+        <h2>📝 गावातील समस्या नोंदवा</h2>
+
+        <p>
+            तक्रार नोंदवण्यासाठी तुमचे नाव आणि मोबाईल नंबर आवश्यक आहे.
+        </p>
+
+        <form id="complaintForm">
+
+            <label for="name">पूर्ण नाव *</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="तुमचे पूर्ण नाव"
+                maxlength="70"
+                autocomplete="name"
+                required
+            >
+
+            <label for="phone">मोबाईल नंबर *</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="10 अंकी मोबाईल नंबर"
+                inputmode="numeric"
+                pattern="[6-9][0-9]{9}"
+                maxlength="10"
+                minlength="10"
+                autocomplete="tel"
+                required
+            >
+
+            <label for="category">समस्येचा प्रकार *</label>
+            <select id="category" name="category" required>
+                <option value="">समस्या निवडा</option>
+                <option value="रस्ता">रस्ता</option>
+                <option value="पाणी">पिण्याचे पाणी</option>
+                <option value="स्वच्छता">स्वच्छता</option>
+                <option value="स्ट्रीट लाईट">स्ट्रीट लाईट</option>
+                <option value="नाली">नाली / ड्रेनेज</option>
+                <option value="शाळा">शाळा</option>
+                <option value="इतर">इतर</option>
+            </select>
+
+            <label for="location">समस्येचे ठिकाण *</label>
+            <input
+                type="text"
+                id="location"
+                name="location"
+                placeholder="उदा. शाळेजवळ"
+                maxlength="100"
+                required
+            >
+
+            <label for="description">समस्येची सविस्तर माहिती *</label>
+            <textarea
+                id="description"
+                name="description"
+                rows="5"
+                maxlength="700"
+                placeholder="समस्या काय आहे ते लिहा"
+                required
+            ></textarea>
+
+            <button type="submit" class="btn">
+                तक्रार सबमिट करा
+            </button>
+
+            <p id="formMessage" role="status"></p>
+
+        </form>
+
+        <p class="warning">
+            सूचना: सध्या हा फॉर्म फक्त वेबसाइटचा भाग आहे.
+            तक्रार प्रत्यक्ष ग्रामपंचायतीकडे पाठवण्यासाठी
+            ऑनलाइन डेटाबेस आणि सुरक्षित सर्व्हर जोडणे आवश्यक आहे.
+        </p>
+
+    </section>
+
+
+    <!-- COMPLAINT STATUS -->
+    <section id="status" class="section">
+
+        <h2>🔎 तक्रारीची स्थिती तपासा</h2>
+
+        <form id="statusForm">
+
+            <label for="complaintId">तक्रार क्रमांक</label>
+
+            <input
+                type="text"
+                id="complaintId"
+                placeholder="उदा. MM-123456"
+                required
+            >
+
+            <button type="submit" class="btn">
+                स्थिती तपासा
+            </button>
+
+        </form>
+
+        <div id="statusResult" role="status"></div>
+
+    </section>
+
+<!-- Sachin Patil - Village Development -->
+<section id="vikas" class="section">
+    <div class="container">
+
+        <h2>Gaon ke Vikas ke Liye</h2>
+
+        <p class="section-intro">
+            Chhota sa gaon, bade sapne.
+            Aaiye, milkar apne Masobawadi ko behtar banayein.
+        </p>
+
+        <div class="development-card">
+
+            <h3>Sachin Patil</h3>
+
+            <p class="profile-label">
+                Masobawadi ke Vikas ke Liye Prayas
+            </p>
+
+            <p>
+                Gaon ka vikas tabhi sambhav hai jab gaon ke log,
+                yuva aur zimmedar nagrik milkar apne gaon ki
+                zarooraton ko samjhein aur unke samadhan ke liye
+                sakaratmak kadam uthayein.
+            </p>
+
+            <h3>Hamare Vikas ke Lakshya</h3>
+
+            <ul class="development-list">
+                <li>Sadak aur aane-jaane ki suvidha mein sudhar</li>
+                <li>Gaon mein safai aur swachhata</li>
+                <li>School aur bachchon ki shiksha ko protsahan</li>
+                <li>Street lights aur zaroori suvidhaon par dhyan</li>
+                <li>Gaon ke yuvaon ki bhagidari</li>
+            </ul>
+
+            <div class="development-note">
+                <strong>Hamari soch:</strong>
+                Gaon ki samasyaon ko pehchanna,
+                un par charcha karna aur milkar samadhan ki
+                disha mein prayas karna.
+            </div>
+
+            <a href="#complaint" class="btn">
+                Gaon ki Samasya Batayein
+            </a>
+
+        </div>
+    </div>
+</section>
+    <!-- NOTICES -->
+    <section id="notices" class="section">
+
+        <h2>📢 ग्रामपंचायत सूचना</h2>
+
+        <div id="noticeList">
+
+            <div class="notice-card">
+                <h3>महत्त्वाची सूचना</h3>
+                <p>
+                    येथे अधिकृतरीत्या तपासलेल्या गावाच्या सूचना
+                    आणि घोषणा प्रकाशित करता येतील.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+
+        <h2>🎓 विद्यार्थी विभाग</h2>
+
+        <div class="link-container">
+
+            <a href="https://www.diksha.gov.in/"
+               target="_blank" rel="noopener">
+                📚 DIKSHA — शैक्षणिक साहित्य
+            </a>
+
+            <a href="https://swayam.gov.in/"
+               target="_blank" rel="noopener">
+                💻 SWAYAM — ऑनलाइन कोर्स
+            </a>
+
+            <a href="https://www.ncs.gov.in/"
+               target="_blank" rel="noopener">
+                💼 National Career Service
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- GOVERNMENT SCHEMES -->
+    <section id="schemes" class="section">
+
+        <h2>🏛️ सरकारी योजना</h2>
+
+        <div class="link-container">
+
+            <a href="https://www.myscheme.gov.in/"
+               target="_blank" rel="noopener">
+                सरकारी योजना शोधा ↗
+            </a>
+
+            <a href="https://www.maharashtra.gov.in/"
+               target="_blank" rel="noopener">
+                महाराष्ट्र शासन ↗
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+
+        <h2>☎️ संपर्क आणि मदत</h2>
+
+        <p>
+            स्थानिक ग्रामपंचायत संपर्क क्रमांक
+            अधिकृतरीत्या तपासल्यानंतर येथे जोडता येईल.
+        </p>
+
+        <p>
+            <strong>भारत आपत्कालीन मदत:</strong>
+            <a href="https://112.gov.in/" target="_blank" rel="noopener">
+                112
+            </a>
+        </p>
+
+        <button id="shareBtn" class="btn" type="button">
+            वेबसाइट शेअर करा
+        </button>
+
+        <p id="shareMessage" role="status"></p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>🌿 Digital Masobawadi</h3>
+
+        <p>छोटंसं गाव, मोठी स्वप्नं.</p>
+
+        <small>
+            स्वतंत्र समुदाय प्रकल्प.
+            ही अधिकृत ग्रामपंचायत वेबसाइट असल्याचा दावा नाही.
+        </small>
+
+    </footer>
+
+
+    <!-- JavaScript FILE -->
+    <script src="script.js"></script>
+
+</body>
+</html>
